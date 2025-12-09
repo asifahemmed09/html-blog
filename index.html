@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightByte Blog — Designing Accessible Forms</title>
+  </head>
+  <body>
+    <!-- =========================
+       SITE HEADER
+  ========================== -->
+    <header>
+      <h1>BrightByte Blog</h1>
+      <p>Short reads for thoughtful builders.</p>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/topics">Topics</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/subscribe">Subscribe</a></li>
+        </ul>
+      </nav>
+
+      <!-- ✅ Small secondary site-wide row -->
+      <div aria-label="Site metadata">
+        <p>
+          Latest update:
+          <time datetime="2025-08-12">August 12, 2025</time>
+          ·
+          <a href="/authors">Browse all authors</a>
+        </p>
+      </div>
+    </header>
+
+    <hr />
+
+    <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+    <main>
+      <!-- =========================
+         BLOG ARTICLE
+    ========================== -->
+      <article>
+        <header>
+          <h2>Designing Accessible Forms: Principles that Respect Users</h2>
+
+          <p>
+            By
+            <a href="/authors/aisha-karim">Aisha Karim</a>
+            —
+            <time datetime="2025-08-10">August 10, 2025</time>
+            · 6 min read
+          </p>
+
+          <p>
+            Tags:
+            <a href="/tags/accessibility">Accessibility</a>,
+            <a href="/tags/ux">UX</a>,
+            <a href="/tags/frontend">Frontend</a>
+          </p>
+        </header>
+
+        <figure>
+          <img
+            src="accessible-form.jpg"
+            alt="A developer testing a web form using keyboard navigation"
+          />
+          <figcaption>
+            Testing form accessibility using keyboard-only navigation
+          </figcaption>
+        </figure>
+
+        <p>
+          Good forms treat every user like the primary user. They are
+          predictable, forgiving, and usable without assumptions about ability,
+          device, or environment.
+        </p>
+
+        <section>
+          <h3>Why accessibility matters</h3>
+          <p>
+            Accessibility is not just a legal or technical concern. It is a
+            human one. Over a billion people worldwide live with some form of
+            disability that affects how they interact with digital products.
+          </p>
+        </section>
+
+        <section>
+          <h3>Key principles for accessible forms</h3>
+
+          <section>
+            <h4>Clear labels and instructions</h4>
+            <p>
+              Every form input must have a visible, meaningful label.
+              Placeholders alone are not a substitute for labels.
+            </p>
+          </section>
+
+          <section>
+            <h4>Keyboard accessibility</h4>
+            <p>
+              Users must be able to navigate, fill, and submit forms using only
+              a keyboard. Focus order should follow the visual flow.
+            </p>
+          </section>
+
+          <section>
+            <h4>Helpful error messages</h4>
+            <p>
+              Error messages should explain what went wrong and how to fix it,
+              without blaming the user.
+            </p>
+          </section>
+        </section>
+
+        <blockquote>
+          <p>
+            If your form works well with a keyboard and screen reader, it will
+            work better for everyone.
+          </p>
+        </blockquote>
+
+        <section>
+          <h3>Quick accessibility checklist</h3>
+          <ul>
+            <li>Every input has an associated label</li>
+            <li>Logical tab order</li>
+            <li>Clear, inline error messages</li>
+            <li>Keyboard-only submission supported</li>
+          </ul>
+        </section>
+
+        <p>
+          Try applying this checklist to your next form and observe how
+          usability improves for all users.
+        </p>
+      </article>
+
+      <hr />
+
+      <!-- =========================
+         ASIDE (AUTHOR & RELATED)
+    ========================== -->
+      <aside>
+        <section>
+          <h3>About the author</h3>
+          <p>
+            <strong>Aisha Karim</strong><br />
+            Senior UX Engineer
+          </p>
+          <p>
+            Aisha focuses on inclusive product design and writes about small
+            engineering decisions that create outsized impact.
+          </p>
+          <p>
+            <a href="/authors/aisha-karim">View all posts by Aisha</a>
+          </p>
+        </section>
+
+        <section>
+          <h3>Related articles</h3>
+          <ul>
+            <li>
+              <a href="/articles/keyboard-first-design"
+                >Keyboard-first design patterns</a
+              >
+            </li>
+            <li>
+              <a href="/articles/forms-without-frustration"
+                >Forms that don’t frustrate</a
+              >
+            </li>
+            <li>
+              <a href="/articles/accessibility-testing"
+                >Accessibility testing workflows</a
+              >
+            </li>
+          </ul>
+        </section>
+      </aside>
+
+      <hr />
+
+      <!-- =========================
+         COMMENTS SECTION
+    ========================== -->
+      <section aria-labelledby="comments-title">
+        <h2 id="comments-title">Comments (3)</h2>
+
+        <article>
+          <header>
+            <p>
+              <strong>Samir Rahman</strong>
+              —
+              <time datetime="2025-08-11T14:20">2 days ago</time>
+            </p>
+          </header>
+          <p>
+            Great checklist. Preserving input values on validation errors made a
+            huge difference in our forms.
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <p>
+              <strong>Mei Lin</strong>
+              —
+              <time datetime="2025-08-12T09:10">1 day ago</time>
+            </p>
+          </header>
+          <p>
+            Explicit labels helped us reduce confusion for non-native speakers.
+          </p>
+        </article>
+      </section>
+
+      <hr />
+
+      <!-- =========================
+         COMMENT FORM
+    ========================== -->
+      <section aria-labelledby="comment-form-title">
+        <h2 id="comment-form-title">Add a comment</h2>
+
+        <form action="/comments" method="post">
+          <p>
+            <label>
+              Name:<br />
+              <input type="text" name="name" required />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Email (not published):<br />
+              <input type="email" name="email" required />
+            </label>
+          </p>
+
+          <p>
+            <label>
+              Comment:<br />
+              <textarea name="comment" rows="5" required></textarea>
+            </label>
+          </p>
+
+          <p>
+            <button type="submit">Post comment</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <hr />
+
+    <!-- =========================
+       FOOTER
+  ========================== -->
+    <footer>
+      <p>© 2025 BrightByte Blog</p>
+
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
